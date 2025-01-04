@@ -11,12 +11,14 @@ from config import MODE, ROBINHOOD_USERNAME, ROBINHOOD_PASSWORD, ROBINHOOD_MFA_S
 
 
 # Attempt to login without MFA
+print("Attempting to login without MFA...")
 try:
     login = rh.login(ROBINHOOD_USERNAME, ROBINHOOD_PASSWORD, store_session=False)
     print("Login successful without MFA.")
 except Exception as e:
     print(f"Login without MFA failed: {e}")
     # Attempt to login with MFA
+    print("Attempting to login with MFA...")
     mfa_generated_code = pyotp.TOTP(ROBINHOOD_MFA_SECRET).now() # Generate TOTP/MFA code
     try:
         login = rh.login(ROBINHOOD_USERNAME, ROBINHOOD_PASSWORD, mfa_code=mfa_generated_code, store_session=False)

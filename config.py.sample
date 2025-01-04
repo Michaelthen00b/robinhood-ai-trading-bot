@@ -2,7 +2,7 @@
 OPENAI_API_KEY = "..."                      # OpenAI API key
 ROBINHOOD_USERNAME = "..."                  # Robinhood username
 ROBINHOOD_PASSWORD = "..."                  # Robinhood password
-ROBINHOOD_MFA_SECRET = "..."                # Robinhood MFA secret
+ROBINHOOD_MFA_SECRET = "..."                # Robinhood MFA secret (https://robin-stocks.readthedocs.io/en/latest/quickstart.html look at "With MFA entered programmatically from Time-based One-Time Password (TOTP)" )
 
 # Basic config parameters
 MODE = "demo"                               # Trading mode (demo, auto, manual)
